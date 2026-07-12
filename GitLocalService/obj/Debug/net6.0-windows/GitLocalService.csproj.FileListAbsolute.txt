@@ -62,3 +62,4 @@ e:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\obj\Debug\net6.0-w
 e:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 e:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\obj\Debug\net6.0-windows\Views\InstallingView.baml
 e:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\obj\Debug\net6.0-windows\Views\InstallingView.g.cs
+E:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\obj\Debug\net6.0-windows\GitLocalService.sourcelink.json

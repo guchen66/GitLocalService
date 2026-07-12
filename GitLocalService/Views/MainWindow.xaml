@@ -142,8 +142,7 @@
                     Width="80"
                     Height="30"
                     Command="{Binding CancelCommand}"
-                    Content="Cancel"
-                    IsEnabled="{Binding !IsInstalling}" />
+                    Content="Cancel" />
             </Grid>
         </Border>
     </Grid>
