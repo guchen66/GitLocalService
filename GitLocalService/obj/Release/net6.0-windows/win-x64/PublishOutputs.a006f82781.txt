@@ -1,0 +1,2 @@
+E:\PublishApplication\GitLocalService.pdb
+E:\PublishApplication\GitLocalService.exe

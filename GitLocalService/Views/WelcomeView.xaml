@@ -1,0 +1,111 @@
+<UserControl x:Class="GitLocalService.Views.WelcomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="300" />
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Rectangle Width="128" Height="128" Margin="0,0,0,30">
+                <Rectangle.Fill>
+                    <DrawingBrush>
+                        <DrawingBrush.Drawing>
+                            <GeometryDrawing>
+                                <GeometryDrawing.Geometry>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="64,8">
+                                            <ArcSegment Size="52,52" Point="64,116" SweepDirection="Clockwise" />
+                                            <ArcSegment Size="52,52" Point="64,8" SweepDirection="Clockwise" />
+                                        </PathFigure>
+                                        <PathFigure StartPoint="64,32">
+                                            <ArcSegment Size="28,28" Point="64,92" SweepDirection="Clockwise" />
+                                            <ArcSegment Size="28,28" Point="64,32" SweepDirection="Clockwise" />
+                                        </PathFigure>
+                                        <PathFigure StartPoint="64,8">
+                                            <LineSegment Point="64,32" />
+                                            <LineSegment Point="88,56" />
+                                            <LineSegment Point="64,92" />
+                                            <LineSegment Point="40,56" />
+                                            <LineSegment Point="64,32" />
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </GeometryDrawing.Geometry>
+                                <GeometryDrawing.Pen>
+                                    <Pen Brush="#F05032" Thickness="8" />
+                                </GeometryDrawing.Pen>
+                            </GeometryDrawing>
+                        </DrawingBrush.Drawing>
+                    </DrawingBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock Text="This will install Git on your computer." 
+                       FontSize="18" 
+                       Foreground="#24292E"
+                       Margin="0,0,0,10" />
+            <TextBlock Text="Click Next to continue or Cancel to exit." 
+                       FontSize="14" 
+                       Foreground="#6E7681"
+                       TextWrapping="Wrap"
+                       Width="500"
+                       TextAlignment="Center" />
+            <StackPanel Orientation="Horizontal" Margin="0,40,0,0" HorizontalAlignment="Center">
+                <Border Background="#F6F8FA" BorderBrush="#D1D9E0" BorderThickness="1" Padding="20,10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Version:" FontSize="12" Foreground="#6E7681" Margin="0,0,10,0" />
+                        <TextBlock Text="{Binding VersionDisplay}" FontSize="12" Foreground="#24292E" FontWeight="Bold" />
+                    </StackPanel>
+                </Border>
+                <Border Background="#F6F8FA" BorderBrush="#D1D9E0" BorderThickness="1" Padding="20,10" Margin="10,0,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Size:" FontSize="12" Foreground="#6E7681" Margin="0,0,10,0" />
+                        <TextBlock Text="{Binding SizeDisplay}" FontSize="12" Foreground="#24292E" FontWeight="Bold" />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Expander Header="用户配置" Margin="20,0,0,0" Width="260">
+                <StackPanel>
+                    <StackPanel Margin="0,10,0,0">
+                        <TextBlock Text="姓名" FontSize="12" Foreground="#6E7681" Margin="0,0,0,5" />
+                        <TextBox Text="{Binding UserName, Mode=TwoWay}" 
+                                 FontSize="13" 
+                                 Padding="8" 
+                                 BorderBrush="#D1D9E0" 
+                                 BorderThickness="1"
+                                 Background="White" />
+                    </StackPanel>
+                    <StackPanel Margin="0,15,0,0">
+                        <TextBlock Text="邮箱" FontSize="12" Foreground="#6E7681" Margin="0,0,0,5" />
+                        <TextBox Text="{Binding UserEmail, Mode=TwoWay}" 
+                                 FontSize="13" 
+                                 Padding="8" 
+                                 BorderBrush="#D1D9E0" 
+                                 BorderThickness="1"
+                                 Background="White" />
+                    </StackPanel>
+                    <TextBlock Text="配置将保存到 git config --global" 
+                               FontSize="10" 
+                               Foreground="#9CA3AF" 
+                               Margin="0,15,0,5" 
+                               TextWrapping="Wrap" />
+                </StackPanel>
+            </Expander>
+            
+            <StackPanel Margin="20,20,0,0" Width="260" Visibility="{Binding GitFound, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Border Background="#E6FFFA" BorderBrush="#9AE6B4" BorderThickness="1" Padding="15">
+                    <StackPanel>
+                        <TextBlock Text="已检测到Git" FontSize="13" Foreground="#276749" FontWeight="Bold" />
+                        <TextBlock Text="{Binding DetectResult.Source}" FontSize="11" Foreground="#38A169" Margin="0,5,0,0" />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
