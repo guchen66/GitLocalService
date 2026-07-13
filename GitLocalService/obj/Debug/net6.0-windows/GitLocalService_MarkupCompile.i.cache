@@ -16,5 +16,5 @@ E:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\App.xaml
 2101869535754
 Views\BranchView.xaml;Views\ComponentsView.xaml;Views\DestinationView.xaml;Views\EditorView.xaml;Views\ExtraOptionsView.xaml;Views\FinishedView.xaml;Views\HttpsView.xaml;Views\InstallingView.xaml;Views\LicenseView.xaml;Views\LineEndingView.xaml;Views\MainWindow.xaml;Views\PathView.xaml;Views\PullView.xaml;Views\ReadyView.xaml;Views\SshView.xaml;Views\StartMenuView.xaml;Views\TerminalView.xaml;Views\WelcomeView.xaml;
 
-False
+True
 

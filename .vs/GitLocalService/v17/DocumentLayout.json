@@ -3,52 +3,20 @@
   "WorkspaceRootPath": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\viewmodels\\componentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\viewmodels\\componentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|e:\\csharp project\\applyclient\\gitlocalservice\\gitlocalservice\\viewmodels\\licenseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\viewmodels\\licenseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\configs\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\configs\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\views\\licenseview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\views\\licenseview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\services\\jsonprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\services\\jsonprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\models\\serviceconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\models\\serviceconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\views\\installingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\views\\installingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\services\\wizardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\services\\wizardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\views\\componentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\views\\componentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\views\\branchview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\views\\branchview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|e:\\csharp project\\applyclient\\gitlocalservice\\gitlocalservice\\views\\licenseview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\views\\licenseview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\views\\destinationview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\views\\destinationview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|E:\\CSharp Project\\ApplyClient\\GitLocalService\\gitlocalservice\\views\\welcomeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4427FF7E-F29E-484E-8554-E54D3AE4931A}|GitLocalService\\GitLocalService.csproj|solutionrelative:gitlocalservice\\views\\welcomeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -91,143 +59,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LicenseViewModel.cs",
-              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\ViewModels\\LicenseViewModel.cs",
-              "RelativeDocumentMoniker": "GitLocalService\\ViewModels\\LicenseViewModel.cs",
-              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\ViewModels\\LicenseViewModel.cs",
-              "RelativeToolTip": "GitLocalService\\ViewModels\\LicenseViewModel.cs",
-              "ViewState": "AQIAAJABAAAAAAAAAAAAAI8BAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T12:29:08.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ServiceConfig.cs",
-              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Models\\ServiceConfig.cs",
-              "RelativeDocumentMoniker": "GitLocalService\\Models\\ServiceConfig.cs",
-              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Models\\ServiceConfig.cs",
-              "RelativeToolTip": "GitLocalService\\Models\\ServiceConfig.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAiwC8AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T12:19:40.975Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "LicenseView.xaml",
               "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\LicenseView.xaml",
               "RelativeDocumentMoniker": "GitLocalService\\Views\\LicenseView.xaml",
               "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\LicenseView.xaml",
               "RelativeToolTip": "GitLocalService\\Views\\LicenseView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-13T12:16:35.382Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "InstallingView.xaml",
-              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\InstallingView.xaml",
-              "RelativeDocumentMoniker": "GitLocalService\\Views\\InstallingView.xaml",
-              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\InstallingView.xaml",
-              "RelativeToolTip": "GitLocalService\\Views\\InstallingView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-13T12:16:34.378Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ComponentsViewModel.cs",
-              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\ViewModels\\ComponentsViewModel.cs",
-              "RelativeDocumentMoniker": "GitLocalService\\ViewModels\\ComponentsViewModel.cs",
-              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\ViewModels\\ComponentsViewModel.cs",
-              "RelativeToolTip": "GitLocalService\\ViewModels\\ComponentsViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T12:09:53.005Z",
+              "WhenOpened": "2026-07-13T15:36:24.932Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
+              "Title": "WelcomeView.xaml",
+              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\WelcomeView.xaml",
+              "RelativeDocumentMoniker": "GitLocalService\\Views\\WelcomeView.xaml",
+              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\WelcomeView.xaml",
+              "RelativeToolTip": "GitLocalService\\Views\\WelcomeView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-13T15:36:13.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DestinationView.xaml",
+              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\DestinationView.xaml",
+              "RelativeDocumentMoniker": "GitLocalService\\Views\\DestinationView.xaml",
+              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\DestinationView.xaml",
+              "RelativeToolTip": "GitLocalService\\Views\\DestinationView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-13T15:23:40.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ComponentsView.xaml",
               "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\ComponentsView.xaml",
               "RelativeDocumentMoniker": "GitLocalService\\Views\\ComponentsView.xaml",
               "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\ComponentsView.xaml",
               "RelativeToolTip": "GitLocalService\\Views\\ComponentsView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-13T12:06:11.175Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BranchView.xaml",
-              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\BranchView.xaml",
-              "RelativeDocumentMoniker": "GitLocalService\\Views\\BranchView.xaml",
-              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\BranchView.xaml",
-              "RelativeToolTip": "GitLocalService\\Views\\BranchView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-13T12:06:05.935Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WizardService.cs",
-              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Services\\WizardService.cs",
-              "RelativeDocumentMoniker": "GitLocalService\\Services\\WizardService.cs",
-              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Services\\WizardService.cs",
-              "RelativeToolTip": "GitLocalService\\Services\\WizardService.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAApwDgAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T12:02:01.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Configs\\appsettings.json",
-              "RelativeDocumentMoniker": "GitLocalService\\Configs\\appsettings.json",
-              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Configs\\appsettings.json",
-              "RelativeToolTip": "GitLocalService\\Configs\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-13T11:59:43.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "JsonProvider.cs",
-              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Services\\JsonProvider.cs",
-              "RelativeDocumentMoniker": "GitLocalService\\Services\\JsonProvider.cs",
-              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Services\\JsonProvider.cs",
-              "RelativeToolTip": "GitLocalService\\Services\\JsonProvider.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAiwDMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T11:58:10.5Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\App.xaml.cs",
-              "RelativeDocumentMoniker": "GitLocalService\\App.xaml.cs",
-              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\App.xaml.cs",
-              "RelativeToolTip": "GitLocalService\\App.xaml.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAADwvygAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T11:54:57.82Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "GitLocalService\\Views\\MainWindow.xaml",
-              "ToolTip": "E:\\CSharp Project\\ApplyClient\\GitLocalService\\GitLocalService\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "GitLocalService\\Views\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-07-12T16:01:15.556Z"
+              "WhenOpened": "2026-07-13T15:19:43.469Z",
+              "EditorCaption": ""
             }
           ]
         }

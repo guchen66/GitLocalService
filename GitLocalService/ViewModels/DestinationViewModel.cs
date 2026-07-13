@@ -15,7 +15,7 @@ namespace GitLocalService.ViewModels
         /// <summary>
         /// 安装配置对象
         /// </summary>
-        private readonly InstallConfig _config;
+       // private readonly InstallConfig _config;
 
         /// <summary>
         /// 私有字段：安装路径
@@ -52,14 +52,17 @@ namespace GitLocalService.ViewModels
         /// </summary>
         public DelegateCommand BrowseCommand { get; }
 
+        private ServiceConfig _serviceConfig;
+
         /// <summary>
         /// 构造函数，注入向导服务
         /// </summary>
         /// <param name="wizardService">向导服务</param>
-        public DestinationViewModel(IWizardService wizardService)
+        public DestinationViewModel(IWizardService wizardService, ServiceConfig serviceConfig)
         {
-            _config = wizardService.Config;
-            _installPath = _config.InstallPath;
+            // _config = wizardService.Config;
+            _serviceConfig = serviceConfig;
+            _installPath = serviceConfig.InstallPath;
             BrowseCommand = new DelegateCommand(Browse);
             UpdateAvailableSpace();
         }
@@ -75,6 +78,7 @@ namespace GitLocalService.ViewModels
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 InstallPath = dialog.SelectedPath;
+                _serviceConfig.InstallPath = InstallPath;
                 UpdateAvailableSpace();
             }
         }
@@ -118,7 +122,7 @@ namespace GitLocalService.ViewModels
         /// </summary>
         public void SaveConfig()
         {
-            _config.InstallPath = _installPath;
+            // _config.InstallPath = _installPath;
         }
     }
 }

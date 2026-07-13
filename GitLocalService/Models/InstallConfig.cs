@@ -8,21 +8,6 @@ namespace GitLocalService.Models
     public class InstallConfig
     {
         /// <summary>
-        /// 私有字段：是否接受许可协议
-        /// </summary>
-        private bool _acceptLicense;
-
-        /// <summary>
-        /// 是否接受许可协议
-        /// <para>当用户在许可协议页面选择"我同意"时设置为true，否则为false</para>
-        /// </summary>
-        public bool AcceptLicense
-        {
-            get => _acceptLicense;
-            set => _acceptLicense = value;
-        }
-
-        /// <summary>
         /// 私有字段：用户姓名，用于设置 git config --global user.name
         /// </summary>
         private string _userName;

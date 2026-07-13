@@ -45,5 +45,8 @@ namespace GitLocalService.Models
 
         [JsonProperty("RegistryRightKey")]
         public bool RegistryRightKey { get; set; }
+
+        //安装路径
+        public string InstallPath { get; set; } = @"C:\Program Files\Git";
     }
 }

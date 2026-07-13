@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GitLocalService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+469795bd9da7a405279a9838d411faab52b905c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3462c35d0dc6a90f25ddcca85dd2f316fd657695")]
 [assembly: System.Reflection.AssemblyProductAttribute("GitLocalService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GitLocalService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

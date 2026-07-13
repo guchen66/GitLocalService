@@ -1,5 +1,6 @@
 using GitLocalService.Models;
 using GitLocalService.Services;
+using Prism.Commands;
 using Prism.Mvvm;
 
 namespace GitLocalService.ViewModels
@@ -318,37 +319,6 @@ POSSIBILITY OF SUCH DAMAGES.
         /// </summary>
         public string LicenseText => _licenseText;
 
-        //private bool _acceptLicense;
-
-        //public bool AcceptLicense
-        //{
-        //    get => _acceptLicense;
-        //    set
-        //    {
-        //        if (SetProperty(ref _acceptLicense, value))
-        //        {
-        //            NotAcceptLicense = !value;
-        //            // 同步回单例
-        //            _serviceConfig.AcceptLicense = value;
-        //        }
-        //    }
-        //}
-
-        //private bool _notAcceptLicense;
-
-        //public bool NotAcceptLicense
-        //{
-        //    get => _notAcceptLicense;
-        //    set
-        //    {
-        //        if (SetProperty(ref _notAcceptLicense, value))
-        //        {
-        //            AcceptLicense = !value;
-        //            _serviceConfig.AcceptLicense = !value;
-        //        }
-        //    }
-        //}
-
         /// <summary>
         /// 是否接受许可协议
         /// <para>绑定到"我同意"单选按钮</para>
@@ -367,14 +337,7 @@ POSSIBILITY OF SUCH DAMAGES.
         public bool NotAcceptLicense
         {
             get => _notAcceptLicense;
-            set
-            {
-                SetProperty(ref _notAcceptLicense, value);
-                if (value)
-                {
-                    _acceptLicense = false;
-                }
-            }
+            set => SetProperty(ref _notAcceptLicense, value);
         }
 
         private readonly ServiceConfig _serviceConfig;
@@ -383,23 +346,29 @@ POSSIBILITY OF SUCH DAMAGES.
         /// 构造函数，注入向导服务
         /// </summary>
         /// <param name="wizardService">向导服务</param>
-        public LicenseViewModel(IWizardService wizardService, ServiceConfig serviceConfig)
+        public LicenseViewModel(ServiceConfig serviceConfig)
         {
-            _config = wizardService.Config;
-            _acceptLicense = _config.AcceptLicense;
             _serviceConfig = serviceConfig;
-            // 直接从单例读取，此时数据已在 Initialize 中加载完毕
             AcceptLicense = _serviceConfig.AcceptLicense;
             NotAcceptLicense = _serviceConfig.NotAcceptLicense;
         }
 
-        /// <summary>
-        /// 保存配置到InstallConfig对象
-        /// <para>在用户点击"下一步"时调用</para>
-        /// </summary>
-        public void SaveConfig()
+        public DelegateCommand AcceptCommand => new DelegateCommand(() =>
         {
-            _config.AcceptLicense = _acceptLicense;
-        }
+            AcceptLicense = true;
+            NotAcceptLicense = false;
+            // 同步到单例
+            _serviceConfig.AcceptLicense = true;
+            _serviceConfig.NotAcceptLicense = false;
+        });
+
+        public DelegateCommand NotAcceptCommand => new DelegateCommand(() =>
+        {
+            NotAcceptLicense = true;
+            AcceptLicense = false;
+            // 同步到单例
+            _serviceConfig.AcceptLicense = false;
+            _serviceConfig.NotAcceptLicense = true;
+        });
     }
 }
