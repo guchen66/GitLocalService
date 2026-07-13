@@ -1,4 +1,5 @@
-﻿﻿﻿﻿﻿using GitLocalService.Services;
+﻿using GitLocalService.Models;
+using GitLocalService.Services;
 using GitLocalService.Views;
 using Prism.Ioc;
 using System.Windows;
@@ -12,10 +13,21 @@ namespace GitLocalService
             return Container.Resolve<MainWindow>();
         }
 
+        protected override void Initialize()
+        {
+            base.Initialize();
+            // 启动时从 JSON 加载配置，填充到已注册的单例中
+            var config = Container.Resolve<ServiceConfig>();
+            var loaded = JsonProvider.LoadConfig();
+
+            config.AcceptLicense = loaded.AcceptLicense;
+            config.RegistryRightKey = loaded.RegistryRightKey;
+        }
+
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IWizardService, WizardService>();
-
+            containerRegistry.RegisterSingleton<ServiceConfig>();
             containerRegistry.RegisterForNavigation<WelcomeView>();
             containerRegistry.RegisterForNavigation<LicenseView>();
             containerRegistry.RegisterForNavigation<DestinationView>();

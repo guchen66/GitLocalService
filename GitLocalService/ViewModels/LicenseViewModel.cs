@@ -15,15 +15,17 @@ namespace GitLocalService.ViewModels
         /// </summary>
         private readonly InstallConfig _config;
 
-        /// <summary>
-        /// 私有字段：是否接受许可协议
-        /// </summary>
+        ///// <summary>
+        ///// 私有字段：是否接受许可协议
+        ///// </summary>
         private bool _acceptLicense;
 
-        /// <summary>
-        /// 私有字段：是否拒绝许可协议（默认选中）
-        /// </summary>
+        ///// <summary>
+        ///// 私有字段：是否拒绝许可协议（默认选中）
+        ///// </summary>
         private bool _notAcceptLicense = true;
+
+        #region--协议文本--
 
         /// <summary>
         /// 私有字段：GNU GPL 协议文本
@@ -309,10 +311,43 @@ POSSIBILITY OF SUCH DAMAGES.
 
                      END OF TERMS AND CONDITIONS";
 
+        #endregion
+
         /// <summary>
         /// GNU GPL 协议文本（只读）
         /// </summary>
         public string LicenseText => _licenseText;
+
+        //private bool _acceptLicense;
+
+        //public bool AcceptLicense
+        //{
+        //    get => _acceptLicense;
+        //    set
+        //    {
+        //        if (SetProperty(ref _acceptLicense, value))
+        //        {
+        //            NotAcceptLicense = !value;
+        //            // 同步回单例
+        //            _serviceConfig.AcceptLicense = value;
+        //        }
+        //    }
+        //}
+
+        //private bool _notAcceptLicense;
+
+        //public bool NotAcceptLicense
+        //{
+        //    get => _notAcceptLicense;
+        //    set
+        //    {
+        //        if (SetProperty(ref _notAcceptLicense, value))
+        //        {
+        //            AcceptLicense = !value;
+        //            _serviceConfig.AcceptLicense = !value;
+        //        }
+        //    }
+        //}
 
         /// <summary>
         /// 是否接受许可协议
@@ -342,14 +377,20 @@ POSSIBILITY OF SUCH DAMAGES.
             }
         }
 
+        private readonly ServiceConfig _serviceConfig;
+
         /// <summary>
         /// 构造函数，注入向导服务
         /// </summary>
         /// <param name="wizardService">向导服务</param>
-        public LicenseViewModel(IWizardService wizardService)
+        public LicenseViewModel(IWizardService wizardService, ServiceConfig serviceConfig)
         {
             _config = wizardService.Config;
             _acceptLicense = _config.AcceptLicense;
+            _serviceConfig = serviceConfig;
+            // 直接从单例读取，此时数据已在 Initialize 中加载完毕
+            AcceptLicense = _serviceConfig.AcceptLicense;
+            NotAcceptLicense = _serviceConfig.NotAcceptLicense;
         }
 
         /// <summary>

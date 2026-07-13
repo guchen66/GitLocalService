@@ -1,6 +1,7 @@
 using GitLocalService.Models;
 using GitLocalService.Services;
 using Prism.Mvvm;
+using System.Collections.Generic;
 
 namespace GitLocalService.ViewModels
 {
@@ -19,7 +20,7 @@ namespace GitLocalService.ViewModels
         /// 可选组件列表（从InstallConfig获取）
         /// <para>支持树形结构，每个组件可包含子组件</para>
         /// </summary>
-        public System.Collections.Generic.List<ComponentItem> Components => _config.Components;
+        public List<ComponentItem> Components => _config.Components;
 
         /// <summary>
         /// 构造函数，注入向导服务

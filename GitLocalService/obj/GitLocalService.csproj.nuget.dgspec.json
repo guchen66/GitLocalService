@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[3.5.1, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            },
             "Prism.DryIoc": {
               "target": "Package",
               "version": "[8.1.97, )"

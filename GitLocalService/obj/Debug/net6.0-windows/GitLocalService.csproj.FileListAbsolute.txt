@@ -63,3 +63,5 @@ e:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\obj\Debug\net6.0-w
 e:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\obj\Debug\net6.0-windows\Views\InstallingView.baml
 e:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\obj\Debug\net6.0-windows\Views\InstallingView.g.cs
 E:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\obj\Debug\net6.0-windows\GitLocalService.sourcelink.json
+E:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\bin\Debug\net6.0-windows\Configs\appsettings.json
+E:\CSharp Project\ApplyClient\GitLocalService\GitLocalService\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
