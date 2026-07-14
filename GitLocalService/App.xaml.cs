@@ -27,6 +27,7 @@ namespace GitLocalService
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IWizardService, WizardService>();
+            containerRegistry.RegisterSingleton<ISharedStateService, SharedStateService>();
             containerRegistry.RegisterSingleton<ServiceConfig>();
             containerRegistry.RegisterForNavigation<WelcomeView>();
             containerRegistry.RegisterForNavigation<LicenseView>();

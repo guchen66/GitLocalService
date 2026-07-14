@@ -1,6 +1,8 @@
 using GitLocalService.Models;
 using GitLocalService.Services;
+using Newtonsoft.Json.Linq;
 using Prism.Commands;
+using Prism.Events;
 using Prism.Mvvm;
 
 namespace GitLocalService.ViewModels
@@ -11,21 +13,9 @@ namespace GitLocalService.ViewModels
     /// </summary>
     public class LicenseViewModel : BindableBase
     {
-        /// <summary>
-        /// 安装配置对象
-        /// </summary>
-        private readonly InstallConfig _config;
-
-        ///// <summary>
-        ///// 私有字段：是否接受许可协议
-        ///// </summary>
         private bool _acceptLicense;
-
-        ///// <summary>
-        ///// 私有字段：是否拒绝许可协议（默认选中）
-        ///// </summary>
         private bool _notAcceptLicense = true;
-
+        private readonly ISharedStateService _sharedService;
         #region--协议文本--
 
         /// <summary>
@@ -341,14 +331,18 @@ POSSIBILITY OF SUCH DAMAGES.
         }
 
         private readonly ServiceConfig _serviceConfig;
+        private readonly IEventAggregator _eventAggregator;
 
         /// <summary>
-        /// 构造函数，注入向导服务
+        /// 构造函数，注入服务配置和事件聚合器
         /// </summary>
-        /// <param name="wizardService">向导服务</param>
-        public LicenseViewModel(ServiceConfig serviceConfig)
+        /// <param name="serviceConfig">服务配置</param>
+        /// <param name="eventAggregator">事件聚合器</param>
+        public LicenseViewModel(ServiceConfig serviceConfig, IEventAggregator eventAggregator, ISharedStateService sharedService)
         {
             _serviceConfig = serviceConfig;
+            _eventAggregator = eventAggregator;
+            _sharedService = sharedService;
             AcceptLicense = _serviceConfig.AcceptLicense;
             NotAcceptLicense = _serviceConfig.NotAcceptLicense;
         }
@@ -357,18 +351,22 @@ POSSIBILITY OF SUCH DAMAGES.
         {
             AcceptLicense = true;
             NotAcceptLicense = false;
-            // 同步到单例
             _serviceConfig.AcceptLicense = true;
             _serviceConfig.NotAcceptLicense = false;
+            // _eventAggregator.GetEvent<LicenseAcceptedEvent>().Publish(true);
+
+            _sharedService.SelectedItem = true;
         });
 
         public DelegateCommand NotAcceptCommand => new DelegateCommand(() =>
         {
             NotAcceptLicense = true;
             AcceptLicense = false;
-            // 同步到单例
             _serviceConfig.AcceptLicense = false;
             _serviceConfig.NotAcceptLicense = true;
+            // _eventAggregator.GetEvent<LicenseAcceptedEvent>().Publish(false);
+
+            _sharedService.SelectedItem = false;
         });
     }
 }

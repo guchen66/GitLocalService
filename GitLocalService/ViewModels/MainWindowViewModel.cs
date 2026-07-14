@@ -1,7 +1,10 @@
+using GitLocalService.Models;
 using GitLocalService.Services;
 using Prism.Commands;
+using Prism.Events;
 using Prism.Mvvm;
 using Prism.Regions;
+using System;
 using System.Windows;
 
 namespace GitLocalService.ViewModels
@@ -20,6 +23,13 @@ namespace GitLocalService.ViewModels
         /// 向导服务，管理步骤导航逻辑
         /// </summary>
         private readonly IWizardService _wizardService;
+
+        /// <summary>
+        /// 事件聚合器，用于跨ViewModel通信
+        /// </summary>
+        private readonly IEventAggregator _eventAggregator;
+
+        private readonly ISharedStateService _sharedStateService;
 
         /// <summary>
         /// 私有字段：窗口标题
@@ -146,16 +156,22 @@ namespace GitLocalService.ViewModels
         /// </summary>
         public DelegateCommand CancelCommand { get; set; }
 
+        private ServiceConfig _serviceConfig;
+
         /// <summary>
         /// 构造函数，注入依赖服务
         /// </summary>
         /// <param name="regionManager">Prism区域管理器</param>
         /// <param name="wizardService">向导服务</param>
-        public MainWindowViewModel(IRegionManager regionManager, IWizardService wizardService)
+        /// <param name="serviceConfig">服务配置</param>
+        /// <param name="eventAggregator">事件聚合器</param>
+        public MainWindowViewModel(IRegionManager regionManager, IWizardService wizardService, ServiceConfig serviceConfig, IEventAggregator eventAggregator, ISharedStateService sharedStateService)
         {
             _regionManager = regionManager;
             _wizardService = wizardService;
-
+            _serviceConfig = serviceConfig;
+            _eventAggregator = eventAggregator;
+            _sharedStateService = sharedStateService;
             // 初始化命令
             PreviousCommand = new DelegateCommand(OnPrevious);
             NextCommand = new DelegateCommand(OnNext);
@@ -163,6 +179,12 @@ namespace GitLocalService.ViewModels
 
             // 监听Region集合变化，当ContentRegion创建完成后导航到第一步
             _regionManager.Regions.CollectionChanged += Regions_CollectionChanged;
+
+            // 订阅LicenseAcceptedEvent，当用户在LicenseView中选择时自动更新CanGoNext
+            _eventAggregator.GetEvent<LicenseAcceptedEvent>().Subscribe(OnLicenseAcceptedChanged);
+
+            // 订阅SharedStateService的ItemChanged事件，实时响应LicenseView的选择变化
+            _sharedStateService.ItemChanged += OnSharedStateChanged;
         }
 
         /// <summary>
@@ -197,7 +219,7 @@ namespace GitLocalService.ViewModels
         {
             // 更新向导服务中的当前步骤
             _wizardService.GoToStep(stepIndex);
-            
+
             // 获取ContentRegion并导航到对应的视图
             var region = _regionManager.Regions["ContentRegion"];
             region.RemoveAll();
@@ -282,67 +304,85 @@ namespace GitLocalService.ViewModels
                     Title = "Welcome";
                     NextButtonContent = "Next >";
                     break;
+
                 case 1:
                     Title = "License Agreement";
                     NextButtonContent = "Next >";
+                    // CanGoNext = _serviceConfig.AcceptLicense;
+                    CanGoNext = _sharedStateService.SelectedItem;
                     break;
+
                 case 2:
                     Title = "Select Destination Location";
                     NextButtonContent = "Next >";
                     break;
+
                 case 3:
                     Title = "Select Components";
                     NextButtonContent = "Next >";
                     break;
+
                 case 4:
                     Title = "Select Start Menu Folder";
                     NextButtonContent = "Next >";
                     break;
+
                 case 5:
                     Title = "Choosing the default editor used by Git";
                     NextButtonContent = "Next >";
                     break;
+
                 case 6:
                     Title = "Adjusting the name of the initial branch";
                     NextButtonContent = "Next >";
                     break;
+
                 case 7:
                     Title = "Adjusting your PATH environment";
                     NextButtonContent = "Next >";
                     break;
+
                 case 8:
                     Title = "Choosing SSH executable";
                     NextButtonContent = "Next >";
                     break;
+
                 case 9:
                     Title = "Choosing HTTPS transport backend";
                     NextButtonContent = "Next >";
                     break;
+
                 case 10:
                     Title = "Configuring the line ending conversions";
                     NextButtonContent = "Next >";
                     break;
+
                 case 11:
                     Title = "Configuring the terminal emulator";
                     NextButtonContent = "Next >";
                     break;
+
                 case 12:
                     Title = "Configuring the default behavior of 'git pull'";
                     NextButtonContent = "Next >";
                     break;
+
                 case 13:
                     Title = "Configuring extra options";
                     NextButtonContent = "Next >";
                     break;
+
                 case 14:
                     Title = "Ready to install";
                     NextButtonContent = "Install";
                     break;
+
                 case 15:
                     Title = "Installing";
                     NextButtonContent = "";
                     CanGoNext = false;
                     break;
+
                 case 16:
                     Title = "Completing the Git Setup Wizard";
                     NextButtonContent = "Finish";
@@ -361,9 +401,29 @@ namespace GitLocalService.ViewModels
         {
             int current = _wizardService.CurrentStep + 1;
             int total = _wizardService.TotalSteps;
-            
+
             ProgressValue = (current * 100) / total;
             ProgressText = $"步骤 {current} / {total}";
+        }
+
+        /// <summary>
+        /// 当LicenseView中用户选择变化时的事件处理（通过EventAggregator）
+        /// <para>自动更新主窗口Next按钮的可用性</para>
+        /// </summary>
+        /// <param name="isAccepted">是否接受许可协议</param>
+        private void OnLicenseAcceptedChanged(bool isAccepted)
+        {
+            CanGoNext = isAccepted;
+        }
+
+        /// <summary>
+        /// 当SharedStateService状态变化时的事件处理
+        /// <para>通过共享服务实时响应LicenseView的选择变化</para>
+        /// </summary>
+        /// <param name="newValue">新的选择状态</param>
+        private void OnSharedStateChanged(bool newValue)
+        {
+            CanGoNext = newValue;
         }
 
         /// <summary>

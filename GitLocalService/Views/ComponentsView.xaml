@@ -4,12 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:prism="http://prismlibrary.com/"
     prism:ViewModelLocator.AutoWireViewModel="True">
-    <CheckBox Content="是否"
-     IsChecked="{Binding Checked}"
-     FontSize="14"
-     Foreground="#24292E"
-     Margin="0,5,0,0" />
-    <!--<Grid>
+
+    <Grid>
 
         <StackPanel>
             <TextBlock Text="Select the components you want to install."
@@ -46,5 +42,5 @@
                 </ScrollViewer>
             </Border>
         </StackPanel>
-    </Grid>-->
+    </Grid>
 </UserControl>
